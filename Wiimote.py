@@ -229,6 +229,7 @@ class Wiimote:
         self._send(0x52, 0x15, 0x00)
 
     def setLed(self, n):
+        "If n == 0, then all the leds are off"
         self._send(0x52, 0x11, int(n << 4))
 
     def _getData(self, check_connection=True):
