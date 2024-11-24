@@ -228,7 +228,7 @@ class Wiimote:
         time.sleep(duration)
         self._send(0x52, 0x15, 0x00)
 
-    def setLed(self, binary):
+    def setLed(self, n):
         self._send(0x52, 0x11, int(n << 4))
 
     def _getData(self, check_connection=True):
